@@ -18,13 +18,13 @@ document.querySelector('.target').addEventListener('click', () => {
 
   const img = document.createElement('img');
   img.classList.add('hidden-image');
-  img.style.width = '200px';
-  img.style.height = '200px';
+  img.style.width = '100px';
+  img.style.height = '100px';
   img.onload = () => {
     img.style.width = 'auto';
     img.style.height = 'auto';
     const ratio = img.naturalWidth / img.naturalHeight;
-    img.style.width = '200px';
+    img.style.width = '100px';
     img.style.height = 'auto';
     img.style.height = img.style.width / ratio;
   };
