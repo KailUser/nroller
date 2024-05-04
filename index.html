@@ -23,9 +23,22 @@
                 event.preventDefault();
                 const username = document.getElementById("username").value;
                 document.cookie = `username=${username}; path=/`;
-                window.location.href = "roll.html";
+                redirectToRollPage();
             });
+
+            redirectToMobilePage();
         });
+
+        function redirectToRollPage() {
+            window.location.href = "roll.html";
+        }
+
+        function redirectToMobilePage() {
+            const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+            if (isMobile) {
+                window.location.href = "./roll_mobile.html";
+            }
+        }
     </script>
     <!-- Primary Meta Tags -->
     <title>NRoll - A small parody of Nico's RNG</title>
