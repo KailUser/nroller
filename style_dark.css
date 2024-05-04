@@ -1,0 +1,81 @@
+/* Global Styles (dark) */
+body {
+    background-color: #121212;
+    color: #fff;
+    text-align: center;
+}
+
+/* Target Button Styles (dark) */
+.target {
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: color 0.3s ease-in-out;
+    color: #7289da;
+}
+
+.target:hover {
+    color: #5b9fd9;
+}
+
+.target:hover:active {
+    animation: flash 1s ease-in-out infinite alternate;
+}
+
+/* Button Flash Animation (dark) */
+@keyframes flash {
+    0% {
+        color: #5b9fd9;
+        text-shadow: 0 0 5px #5b9fd9;
+    }
+    100% {
+        color: #ff0000;
+        text-shadow: 0 0 5px #ff0000;
+    }
+}
+
+/* Add spacing between elements (dark) */
+.container {
+    padding: 2rem;
+}
+
+/* // styles (dark) */
+.rare-text {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  font-weight: bold;
+  color: transparent;
+  text-shadow: 0 0 1px transparent;
+  animation: rainbow 5s ease-in-out infinite;
+}
+
+@keyframes rainbow {
+  0% {
+    text-shadow: 0 0 1px #FF00FF;
+  }
+  14% {
+    text-shadow: 0 0 1px #9400D3;
+  }
+  28% {
+    text-shadow: 0 0 1px #4B0082;
+  }
+  42% {
+    text-shadow: 0 0 1px #0000FF;
+  }
+  56% {
+    text-shadow: 0 0 1px #00A86B;
+  }
+  70% {
+    text-shadow: 0 0 1px #FFFF00;
+  }
+  84% {
+    text-shadow: 0 0 1px #FFA500;
+  }
+  98% {
+    text-shadow: 0 0 1px #FF4500;
+  }
+  100% {
+    text-shadow: 0 0 1px #FF4500;
+  }
+}

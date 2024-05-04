@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NextBots Roller | Login</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: black;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.querySelector("form");
+            form.addEventListener("submit", function(event) {
+                event.preventDefault();
+                const username = document.getElementById("username").value;
+                document.cookie = `username=${username}; path=/`;
+                window.location.href = "roll.html";
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title">Login to the site</h1>
+                <form>
+                    <label for="username">Username (Anything | Site doesn't scan):</label>
+                    <input type="text" id="username" name="username" class="form-control">
+                    <button type="submit" class="btn btn-primary mt-2">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+</html>
+

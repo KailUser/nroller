@@ -1,0 +1,80 @@
+
+/* Global Styles */
+* {
+    text-align: center;
+}
+
+/* Target Button Styles */
+.target {
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: underline;
+    transition: color 0.3s ease-in-out;
+}
+
+.target:hover {
+    color: blue;
+}
+
+.target:hover:active {
+    animation: flash 1s ease-in-out infinite alternate;
+}
+
+/* Button Flash Animation */
+@keyframes flash {
+    0% {
+        color: blue;
+        text-shadow: 0 0 5px blue;
+    }
+    100% {
+        color: red;
+        text-shadow: 0 0 5px red;
+    }
+}
+
+/* Add spacing between elements */
+.container {
+    padding: 2rem;
+}
+
+/* // styles */
+.rare-text {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  font-weight: bold;
+  color: transparent;
+  text-shadow: 0 0 1px transparent;
+  animation: rainbow 5s ease-in-out infinite;
+}
+
+@keyframes rainbow {
+  0% {
+    text-shadow: 0 0 1px #FF0000;
+  }
+  14% {
+    text-shadow: 0 0 1px #FF4500;
+  }
+  28% {
+    text-shadow: 0 0 1px #FF9C00;
+  }
+  42% {
+    text-shadow: 0 0 1px #FFD700;
+  }
+  56% {
+    text-shadow: 0 0 1px #BFFF00;
+  }
+  70% {
+    text-shadow: 0 0 1px #80FF00;
+  }
+  84% {
+    text-shadow: 0 0 1px #32FF45;
+  }
+  98% {
+    text-shadow: 0 0 1px #00FF00;
+  }
+  100% {
+    text-shadow: 0 0 1px #00FF00;
+  }
+}
+
