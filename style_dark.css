@@ -34,6 +34,10 @@ body {
     }
 }
 
+.text-about, #aboutModalLabel {
+  color:black;
+}
+
 /* Add spacing between elements (dark) */
 .container {
     padding: 2rem;
