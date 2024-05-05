@@ -23,10 +23,15 @@
                 event.preventDefault();
                 const username = document.getElementById("username").value;
                 document.cookie = `username=${username}; path=/`;
-                redirectToRollPage();
+                const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+                if (isMobile) {
+                    redirectToMobilePage();
+                }
+                else {
+                    redirectToRollPage();
+                }
             });
 
-            redirectToMobilePage();
         });
 
         function redirectToRollPage() {

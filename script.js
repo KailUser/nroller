@@ -46,7 +46,12 @@ document.querySelector('.target').addEventListener('click', () => {
     if (files[fileIndex].endsWith('.gif')) {
       text.textContent = 'ThIs ImAgE iS rArE';
       text.classList.add('rare-text');
-    } else {
+    } 
+    else if (fileName === 'developer of NRoll') {
+      text.textContent = 'Wait... This is developer of NRoll????';
+      text.classList.add('rare-text');
+    }
+    else {
       text.textContent = `You got ${fileName}`;
     }
     const p = document.createElement('p');

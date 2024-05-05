@@ -1,6 +1,11 @@
 let username = getUsernameFromCookies(); // get username from cookies on load
 let popup = null;
 
+const username_field = document.getElementById("username");
+const text2 = document.createTextNode(`${username}`); 
+
+username_field.appendChild(text2);
+
 document.querySelector('.target').addEventListener('click', () => {
   if (popup) {
     popup.remove();
@@ -18,13 +23,13 @@ document.querySelector('.target').addEventListener('click', () => {
 
   const img = document.createElement('img');
   img.classList.add('hidden-image');
-  img.style.width = '100px';
+  img.style.width = '150px';
   img.style.height = '100px';
   img.onload = () => {
     img.style.width = 'auto';
     img.style.height = 'auto';
     const ratio = img.naturalWidth / img.naturalHeight;
-    img.style.width = '100px';
+    img.style.width = '150px';
     img.style.height = 'auto';
     img.style.height = img.style.width / ratio;
   };
@@ -40,7 +45,12 @@ document.querySelector('.target').addEventListener('click', () => {
     if (files[fileIndex].endsWith('.gif')) {
       text.textContent = 'ThIs ImAgE iS rArE';
       text.classList.add('rare-text');
-    } else {
+    }
+    else if (fileName === 'developer of NRoll') {
+      text.textContent = 'Wait... This is developer of NRoll????';
+      text.classList.add('rare-text');
+    }
+    else {
       text.textContent = `You got ${fileName}`;
     }
     const p = document.createElement('p');
